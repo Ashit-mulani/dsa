@@ -1,0 +1,23 @@
+ given sorted arr, target
+ 
+ > brute force
+   
+    for loop i = 0 until  i < length of arr 
+        for loop j = i + 1 until j < length of arr
+            if arr[i] + arr[j] = target
+                return  arr[i], arr[j] 
+  
+
+ > optimized
+
+    left = 0
+    right = arr.length - 1
+
+    while loop until left < right
+        sum = arr[left] + arr[right]
+        if sum = target
+            return arr[left], arr[right]
+        else sum < target 
+            left ++
+        else
+            right --
