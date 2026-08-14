@@ -1,0 +1,21 @@
+ given sorted arr, find 3 sum 0 elements
+
+ > brute
+    for loop i = 0 until i < arr.length
+        for loop j = i + 1 until j < arr.length
+            for loop k = j + 1 until k < arr.length
+                if arr[i] + arr[j] + arr[k] == 0
+                    return arr[i], arr[j], arr[k]
+
+ > optimized
+    for loop i = 0 until i < arr.length 
+        left = i + 1
+        rigth = arr.length - 1
+        while loop until left < right
+            sum = arr[i] + arr[left] + arr[right]
+            if sum == 0
+                return arr[i], arr[left], arr[right]
+            else if sum < 0
+                left++
+            else
+                right--
