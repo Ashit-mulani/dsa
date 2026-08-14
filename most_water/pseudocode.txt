@@ -1,0 +1,32 @@
+given arr, find index to make container with most water
+
+ > brute
+    max_area = 0
+    for loop i = 0 until i < arr.length
+        hight = 0
+        width = 0
+        area = 0
+        for loop j = i + 1 until j < arr.length
+            hight = min number from arr[i] & arr[j]
+            width = j - i
+            area = hight * width
+            if area > max_area
+                max_area = area
+    retun max_area
+
+ > optimized
+    max_area = 0
+    left = 0
+    right = arr.length - 1
+    while loop until left < right
+        hight = min number from arr[left] & arr[right]
+        width =  right - left
+        area = hight * width
+        if area > max_area
+            max_area = area
+        if arr[left] < arr[right]
+            left++
+        else 
+            right--
+    retun max_area
+
