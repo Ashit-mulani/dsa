@@ -135,3 +135,58 @@ for (let a = 1; a <= n; a++) {
   }
   console.log();
 }
+
+for (let a = 1; a <= n; a++) {
+  for (let b = 1; b <= a; b++) {
+    if ((a + b) % 2 == 0) {
+      process.stdout.write(0 + "");
+    } else {
+      process.stdout.write(1 + "");
+    }
+  }
+  console.log();
+}
+
+for (let a = 1; a <= n; a++) {
+  for (let b = 1; b <= a; b++) {
+    process.stdout.write(a + "");
+  }
+  console.log();
+}
+for (let a = n - 1; a >= 1; a--) {
+  for (let b = 1; b <= a; b++) {
+    process.stdout.write(a + "");
+  }
+  console.log();
+}
+
+for (let a = 1; a <= n; a++) {
+  for (let b = 1; b <= a; b++) {
+    process.stdout.write(b + "");
+  }
+  console.log();
+}
+for (let a = n - 1; a >= 1; a--) {
+  for (let b = 1; b <= a; b++) {
+    process.stdout.write(b + "");
+  }
+  console.log();
+}
+
+for (let a = 1; a <= n; a++) {
+  for (let b = 2; b <= a; b++) {
+    process.stdout.write("-");
+  }
+  for (let c = 0; c <= n - a; c++) {
+    process.stdout.write(c + a + "");
+  }
+  console.log();
+}
+
+for (let a = 1; a <= n; a++) {
+  for (let b = 1; b <= n; b++) {
+    let num = ((a + b - 2) % n) + 1;
+    process.stdout.write(num + "");
+  }
+  console.log();
+}
