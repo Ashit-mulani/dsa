@@ -40,5 +40,3 @@ function optimized() {
     }
   }
 }
-
-console.log(optimized());
