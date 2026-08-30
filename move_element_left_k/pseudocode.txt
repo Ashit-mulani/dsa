@@ -1,0 +1,8 @@
+given arr and k, move element to left by k step
+
+ > brute
+    for loop i = 0 until i < k
+        copy = arr[0]
+        for loop i = 0 until i <= arr.length - 1
+            arr[i] = arr[i + 1]
+        arr[arr.length - 1 ] = copy
