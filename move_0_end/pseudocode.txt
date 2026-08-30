@@ -1,0 +1,19 @@
+given arr, move all 0 at the end
+
+ > brute
+    all_zero = []
+    other = []
+    for loop i = 0 until i <= arr.lenght - 1
+        if arr[i] == 0
+            all_zero.push(0)
+        else 
+            other.push(arr[i])
+
+ > optimized
+    left = 0
+    for loop i = 0 until i <= arr.lenght - 1
+       if(arr[right] !== 0){
+          [arr[left], arr[right]] = [arr[right], arr[left]];
+          left++;
+       }
+

@@ -1,0 +1,13 @@
+given arr, reverse arr
+
+ > optimize
+    left = 0 
+    right = arr.length - 1
+    while loop until left < right
+        temp = arr[left]
+        arr[left] = arr[right]
+        arr[right] = temp
+        left++
+        right--
+
+        
