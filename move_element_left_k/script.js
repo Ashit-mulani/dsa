@@ -1,5 +1,6 @@
 const arr = [1, 2, 3, 4, 5];
-const k = 2;
+let k = 6;
+k = k % arr.length;
 
 /**
  *  brute force  :
