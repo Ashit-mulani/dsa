@@ -16,7 +16,30 @@ function brute() {
     }
     arr[arr.length - 1] = copy;
   }
+  console.log(arr);
 }
 
-brute();
-console.log(arr);
+/**
+ * optimized :
+ * time O(n),
+ * space O(1)
+ */
+
+function reverse(startIdx, endIdx) {
+  while (startIdx < endIdx) {
+    let temp = arr[startIdx];
+    arr[startIdx] = arr[endIdx];
+    arr[endIdx] = temp;
+    startIdx++;
+    endIdx--;
+  }
+}
+
+function optimized() {
+  reverse(0, k - 1);
+  reverse(k, arr.length - 1);
+  reverse(0, arr.length - 1);
+  console.log(arr);
+}
+
+optimized();

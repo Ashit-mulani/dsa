@@ -16,3 +16,17 @@ function optimized() {
 }
 
 optimized();
+
+/**
+ *  with XOR
+ */
+function xor() {
+  let xor = arr.length;
+  for (let i = 1; i < arr.length; i++) {
+    xor ^= i;
+    xor ^= arr[i - 1];
+  }
+  console.log(xor);
+}
+
+xor();
