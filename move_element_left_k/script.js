@@ -1,5 +1,5 @@
 const arr = [1, 2, 3, 4, 5];
-let k = 6;
+let k = 2;
 k = k % arr.length;
 
 /**
@@ -21,6 +21,19 @@ function brute() {
 
 /**
  * optimized :
+ * time O(n)
+ * space O(n)
+ */
+function otherOptimized() {
+  let temp = [];
+  for (let i = 0; i < arr.length; i++) {
+    temp[i] = arr[(i + k) % arr.length];
+  }
+  console.log(temp);
+}
+
+/**
+ * optimized :
  * time O(n),
  * space O(1)
  */
@@ -34,7 +47,6 @@ function reverse(startIdx, endIdx) {
     endIdx--;
   }
 }
-
 function optimized() {
   reverse(0, k - 1);
   reverse(k, arr.length - 1);
